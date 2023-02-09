@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:background="#F9F9FB">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_help_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_operation_help"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_margin="16dp">
+
+    </androidx.appcompat.widget.AppCompatImageView>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_toki_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_toki_logo"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="200dp">
+
+    </androidx.appcompat.widget.AppCompatImageView>
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_helper_appearance"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/ic_helper_appearance"
+        android:layout_marginTop="2dp"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="@+id/til_phone"
+        app:layout_constraintStart_toStartOf="@+id/til_phone"
+        app:layout_constraintEnd_toEndOf="@+id/til_phone"
+        app:layout_constraintBottom_toBottomOf="@+id/til_phone"
+        />
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_error_appearance"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/ic_error_appearance"
+        android:layout_marginTop="2dp"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="@+id/til_phone"
+        app:layout_constraintStart_toStartOf="@+id/til_phone"
+        app:layout_constraintEnd_toEndOf="@+id/til_phone"
+        app:layout_constraintBottom_toBottomOf="@+id/til_phone"
+        />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_phone"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="60dp"
+        android:hint="Phone Number"
+        app:boxStrokeWidth="0dp"
+        app:boxStrokeWidthFocused="0dp"
+        app:boxBackgroundColor="#FFFFFF"
+        app:boxCornerRadiusBottomEnd="12dp"
+        app:boxCornerRadiusBottomStart="12dp"
+        app:boxCornerRadiusTopEnd="12dp"
+        app:boxCornerRadiusTopStart="12dp"
+        app:errorTextAppearance="@style/ErrorTextAppearance"
+        app:helperTextTextAppearance="@style/HelperTextAppearance"
+        app:hintTextColor="#818E9A"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_toki_logo"
+        app:startIconDrawable="@drawable/operation_profile_logo">
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/et_phone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/transparent"
+            android:inputType="number"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_continue_disable"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Continue"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/til_phone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="38dp"
+        android:background="@drawable/bg_btn_disabled"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_continue_enable"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Continue"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/til_phone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="38dp"
+        android:background="@drawable/bg_btn_enabled"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
